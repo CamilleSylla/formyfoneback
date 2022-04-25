@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "accueil_section_promotion_en_avants",
+  "info": {
+    "singularName": "accueil-section-promotion-en-avant",
+    "pluralName": "accueil-section-promotion-en-avants",
+    "displayName": "Accueil Section Promotion en avant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "Bom": {
+      "type": "string"
+    }
+  }
+}

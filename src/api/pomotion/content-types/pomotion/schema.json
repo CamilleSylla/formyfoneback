@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pomotions",
+  "info": {
+    "singularName": "pomotion",
+    "pluralName": "pomotions",
+    "displayName": "Pomotion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "debut": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin": {
+      "type": "datetime",
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

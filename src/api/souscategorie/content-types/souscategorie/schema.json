@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "souscategories",
+  "info": {
+    "singularName": "souscategorie",
+    "pluralName": "souscategories",
+    "displayName": "Souscategorie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "categorie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "souscategories"
+    }
+  }
+}

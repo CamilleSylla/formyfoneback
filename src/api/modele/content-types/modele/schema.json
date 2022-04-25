@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modeles",
+  "info": {
+    "singularName": "modele",
+    "pluralName": "modeles",
+    "displayName": "modele"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "modele"
+    },
+    "marque": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::marque.marque",
+      "inversedBy": "modeles"
+    }
+  }
+}

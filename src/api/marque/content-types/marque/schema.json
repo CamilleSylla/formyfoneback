@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marques",
+  "info": {
+    "singularName": "marque",
+    "pluralName": "marques",
+    "displayName": "Marque",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "marque"
+    },
+    "modeles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modele.modele",
+      "mappedBy": "marque"
+    }
+  }
+}
