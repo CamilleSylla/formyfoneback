@@ -64,28 +64,27 @@
       "target": "api::tag.tag",
       "inversedBy": "articles"
     },
-    "marque": {
+    "marques": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::marque.marque",
-      "inversedBy": "articles"
-    },
-    "modele": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::modele.modele",
       "inversedBy": "articles"
     },
     "category": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::categorie.categorie",
-      "inversedBy": "articles"
+      "relation": "oneToOne",
+      "target": "api::categorie.categorie"
     },
     "souscategory": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::souscategorie.souscategorie"
+    },
+    "modeles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::modele.modele",
+      "inversedBy": "articles"
     }
   }
 }

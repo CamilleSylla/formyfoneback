@@ -4,7 +4,8 @@
   "info": {
     "singularName": "modele",
     "pluralName": "modeles",
-    "displayName": "modele"
+    "displayName": "modele",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,16 +15,16 @@
     "name": {
       "type": "string"
     },
+    "marques": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::marque.marque",
+      "inversedBy": "modeles"
+    },
     "articles": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::article.article",
-      "mappedBy": "modele"
-    },
-    "marque": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::marque.marque",
       "inversedBy": "modeles"
     }
   }

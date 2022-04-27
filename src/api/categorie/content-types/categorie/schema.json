@@ -20,12 +20,6 @@
       "relation": "oneToMany",
       "target": "api::souscategorie.souscategorie",
       "mappedBy": "categorie"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
     }
   }
 }

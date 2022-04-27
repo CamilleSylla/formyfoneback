@@ -15,17 +15,17 @@
     "name": {
       "type": "string"
     },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "marque"
-    },
     "modeles": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::modele.modele",
-      "mappedBy": "marque"
+      "mappedBy": "marques"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "inversedBy": "marques"
     }
   }
 }
