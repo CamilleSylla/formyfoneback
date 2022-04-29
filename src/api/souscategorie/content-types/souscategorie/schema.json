@@ -4,7 +4,8 @@
   "info": {
     "singularName": "souscategorie",
     "pluralName": "souscategories",
-    "displayName": "Souscategorie"
+    "displayName": "Souscategorie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,21 @@
       "relation": "manyToOne",
       "target": "api::categorie.categorie",
       "inversedBy": "souscategories"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "visible": {
+      "type": "boolean",
+      "required": true
     }
   }
 }

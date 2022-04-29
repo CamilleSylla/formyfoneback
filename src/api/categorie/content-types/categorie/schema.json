@@ -20,6 +20,16 @@
       "relation": "oneToMany",
       "target": "api::souscategorie.souscategorie",
       "mappedBy": "categorie"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
